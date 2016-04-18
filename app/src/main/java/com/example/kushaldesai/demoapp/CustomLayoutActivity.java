@@ -31,6 +31,7 @@ public class CustomLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_view_main);
         ButterKnife.inject(this);
+        // testing
     }
 
 }
