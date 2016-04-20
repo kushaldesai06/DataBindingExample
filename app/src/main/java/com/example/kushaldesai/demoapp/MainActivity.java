@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -22,6 +23,7 @@ import com.example.kushaldesai.demoapp.Adapters.BooksRecyclerAdapter;
 import com.example.kushaldesai.demoapp.Listners.RecyclerItemClickListener;
 import com.example.kushaldesai.demoapp.databinding.ActivityMainBinding;
 import com.example.kushaldesai.demoapp.model.SearchResults;
+import com.example.testlibproject.BasicCalculations;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 .setLogLevel(RestAdapter.LogLevel.FULL)
                 .build();
         mGoogleBooksService = restAdapter.create(GoogleBooksService.class);
+        Log.e("Test Lib","Date Formated = "+ BasicCalculations.ConvertDate("20 Apr 2016 02:23:44"));
     }
 
     @OnClick(R.id.search_button)
