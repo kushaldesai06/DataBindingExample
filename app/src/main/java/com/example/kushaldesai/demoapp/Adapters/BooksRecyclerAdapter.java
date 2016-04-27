@@ -3,6 +3,7 @@ package com.example.kushaldesai.demoapp.Adapters;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class BooksRecyclerAdapter extends RecyclerView.Adapter<BooksRecyclerAdap
     public BindingHolder onCreateViewHolder(ViewGroup parent, int type) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_search_result, parent, false);
         BindingHolder holder = new BindingHolder(v);
+        Log.e("Inside Oncreae","On creat");
         return holder;
     }
 
